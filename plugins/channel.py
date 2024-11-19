@@ -5,7 +5,7 @@ from utils import get_poster
 from pyrogram.types import *
 import re
 
-TO_CHANNEL = -1002479401977
+TO_CHANNEL = -1002247041357
 
 media_filter = filters.document | filters.video | filters.audio
 
