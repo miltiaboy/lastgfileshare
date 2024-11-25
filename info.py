@@ -41,7 +41,7 @@ DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://MammoottyV1:MammoottyV
 DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://MammoottyV2:MammoottyV2@cluster0.2fwwi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DATABASE_URI3 = environ.get('DATABASE_URI3', "mongodb+srv://MammoottyV3:MammoottyV3@cluster0.l1wnp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DATABASE_NAME = environ.get('DATABASE_NAME', "MammoottyV1")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'mcu_files')
 
 #Auto approve
 CHAT_ID = [int(app_chat_id) if id_pattern.search(app_chat_id) else app_chat_id for app_chat_id in environ.get('CHAT_ID', '-1002303772763').split()]
