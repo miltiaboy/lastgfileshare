@@ -367,7 +367,7 @@ async def start(client, message):
         file_id=file_id,
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('പുതിയ സിനിമകൾ', url='https://t.me/+JRWRXAzDwkc2NDA1')
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('പുതിയ സിനിമകൾ', url='https://t.me/MCUupdatesLINKS')
             ],[
             InlineKeyboardButton('മൂവീസ് ഗ്രൂപ്പ് ', url='https://t.me/+JRWRXAzDwkc2NDA1')
             ]])
