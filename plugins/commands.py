@@ -152,9 +152,9 @@ async def start(client, message):
             try:
                 kk, file_id = message.command[1].split("_", 1)
                 pre = 'checksubp' if kk == 'filep' else 'checksub' 
-                btn.append([InlineKeyboardButton("Try Again", callback_data=f"{pre}#{file_id}")])
+                btn.append([InlineKeyboardButton("🔄 Try Again 🔄", callback_data=f"{pre}#{file_id}")])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton("Try Again", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+                btn.append([InlineKeyboardButton("🔄 Try Again 🔄", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         sh = await client.send_message(
             chat_id=message.from_user.id,
             text="**⚠️ ശ്രദ്ധിക്കുക ⚠️\n\nഫയൽ ലഭിക്കാൻ ഒരൊറ്റ ഒരു കാര്യം ചെയ്താൽ മതി താഴെ കാണുന്ന «➳ 𝐽𝑂𝐼𝑁 𝑈𝑃𝐷𝐴𝑇𝐸 𝐶𝐻𝑁𝑁𝑁𝐸𝐿 ✺» ബട്ടൻ ക്ലിക്ക് ചെയ്തിട്ട് «Request to join chnnnel» ക്ലിക്ക് ചെയ്താൽ അപ്പോൾ തന്നെ ഫയൽ ലഭിക്കും..!\n\n⚠️ 𝐵𝑒 𝐶𝑎𝑟𝑒𝑓𝑢𝑙 ⚠️\n\n𝑇𝑜 𝑔𝑒𝑡 𝑡ℎ𝑒 𝑓𝑖𝑙𝑒, 𝑦𝑜𝑢 𝑗𝑢𝑠𝑡 ℎ𝑎𝑣𝑒 𝑡𝑜 𝑑𝑜 𝑜𝑛𝑒 𝑡ℎ𝑖𝑛𝑔, 𝑐𝑙𝑖𝑐𝑘 𝑜𝑛 𝑡ℎ𝑒 𝑏𝑒𝑙𝑜𝑤 «➳ 𝐽𝑂𝐼𝑁 𝑈𝑃𝐷𝐴𝑇𝐸 𝐶𝐻𝑁𝑁𝑁𝐸𝐿 ✺» 𝑏𝑢𝑡𝑡𝑜𝑛 𝑎𝑛𝑑 𝑡ℎ𝑒𝑛 𝑐𝑙𝑖𝑐𝑘 𝑜𝑛 «𝑅𝑒𝑞𝑢𝑒𝑠𝑡 𝑡𝑜 𝑗𝑜𝑖𝑛 𝑐ℎ𝑎𝑛𝑛𝑒𝑙» 𝑎𝑛𝑑 𝑡ℎ𝑒𝑛 𝑦𝑜𝑢 𝑤𝑖𝑙𝑙 𝑔𝑒𝑡 𝑡ℎ𝑒  𝑓𝑖𝑙𝑒..!\n\nCHANNEL JOINED NOT MOVIE COOMING TRY AGAIN CILCK NOW**",
