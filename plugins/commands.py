@@ -76,7 +76,7 @@ async def send_file(client, query, ident, file_id):
     if f_caption is None:
         f_cation = f"{title}"
     inline_keyboard = [[
-            InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/+mKFmz9pYLkc5Njhl')
+            InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/MCUupdatesLINKS')
             ],[     
             InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')
     ]]
@@ -95,9 +95,9 @@ async def start(client, message):
         buttons = [
                InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                ],[
-                InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/+mKFmz9pYLkc5Njhl')
+                InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/MCUupdatesLINKS')
               ],[
-                InlineKeyboardButton('⭕️ 𝐌𝐎𝐕𝐈𝐄 𝐆𝐑𝐎𝐔𝐏 𝐋𝐈𝐍𝐊 ⭕️', url="https://t.me/+UOqKD-B3qutmMmU1"),
+                InlineKeyboardButton('⭕️ 𝐌𝐎𝐕𝐈𝐄 𝐆𝐑𝐎𝐔𝐏 𝐋𝐈𝐍𝐊 ⭕️', url="https://t.me/+eVBVOyp9PRk3YmFl"),
         ]       
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup)
@@ -369,7 +369,7 @@ async def start(client, message):
         protect_content=True if pre == 'filep' else False,
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('പുതിയ സിനിമകൾ', url='https://t.me/MCUupdatesLINKS')
             ],[
-            InlineKeyboardButton('മൂവീസ് ഗ്രൂപ്പ് ', url='https://t.me/+JRWRXAzDwkc2NDA1')
+            InlineKeyboardButton('മൂവീസ് ഗ്രൂപ്പ് ', url='https://t.me/+eVBVOyp9PRk3YmFl')
             ]])
     )
     
