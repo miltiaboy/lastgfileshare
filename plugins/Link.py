@@ -8,7 +8,7 @@ async def generate_link(client, message):
         await message.reply("Please provide the name for the movie! Example: `/link game of thrones`")
         return
     movie_name = command_text[1].replace(" ", "-")
-    link = f"https://t.me/Mammootty_bot_BOT?start=getfile-{movie_name}"
+    link = f"https://t.me/mcu_Mammootty_bot?start=getfile-{movie_name}"
     
     await message.reply(
         text=f"Here is your link: {link}",
