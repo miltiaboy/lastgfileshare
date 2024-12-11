@@ -2,10 +2,11 @@ class script(object):
     START_TXT = """<b>𝖧𝖾𝗒 {}, 𝖨 𝖠𝗆 <a href=https://t.me/{}>{}</a>, 𝖧𝖺𝗉𝗉𝗒 🖤 𝖳𝗈 𝖧𝖺𝗏𝖾 𝖸𝗈𝗎
 
 𝖨𝖺𝗆 𝖯𝗈𝗐𝖾𝗋𝖥𝗎𝗅𝗅 𝖠𝗎𝗍𝗈 𝖥𝗂𝗅𝗍𝖾𝗋 + 𝖬𝗈𝗏𝗂𝖾 𝖲𝖾𝖺𝗋𝖼𝗁 + 𝖬𝖺𝗇𝗎𝖺𝗅 𝖥𝗂𝗅𝗍𝖾𝗋 𝖡𝗈𝗍 ⚙
-
 𝖨𝖺𝗆 𝖠 𝖡𝗈𝗍 𝖯𝗋𝗈𝗏𝗂𝖽𝗂𝗇𝗀 𝖬𝗈𝗏𝗂𝖾𝗌 𝖠𝗇𝖽 𝖲𝖾𝗋𝗂𝖾𝗌 𝖲𝗈 𝖠𝖽𝖽 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖥𝖺𝗆. 𝖳𝗁𝖾𝗇 𝖨 𝖶𝗂𝗅𝗅 𝗌𝖾𝗇𝗍 𝖳𝗁𝖾 𝖬𝗈𝗏𝗂𝖾𝗌⏳
 
-𝖢𝗅𝗂𝖼𝗄 𝖡𝖾𝗅𝗈𝗐 𝖴𝗌𝖾𝖿𝗎𝗅 𝖡𝗎𝗍𝗍𝗈𝗇𝗌🫶</b>"""
+Here You Can Request Movie's, Just Sent <a href='https://t.me/mcu_Mammootty_bot'>Movie Name</a> With Proper <a href='https://www.google.com/'>Google</a> Spelling..!!
+
+Fᴏʀ Mᴏʀᴇ Dᴇᴛᴀɪʟꜱ Cʟɪᴄᴋ /help</b>"""
     
     HELP_TXT = """<b>𝖧𝖾𝗒 {}, 𝖨𝖺𝗆 𝖧𝖺𝗉𝗉𝗒 🖤 𝖳𝗈 𝖧𝖺𝗏𝖾 𝖸𝗈𝗎
     
