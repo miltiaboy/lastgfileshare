@@ -189,7 +189,9 @@ Name - {}
     
 {file_caption}
 
-🔗 𝗠𝗔𝗜𝗡 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗟𝗜𝗡𝗞 ☞ 
-t.me/MCUupdatesLINKS
-🔗 𝙈𝙤𝙫𝙞𝙚 𝙍𝙚𝙦𝙪𝙚𝙨𝙩 𝙂𝙧𝙤𝙪𝙥 ☞ 
-t.me/+eVBVOyp9PRk3YmFl</b>"""
+╔═══ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═══╗ 
+➲ <a href='t.me/MCUupdatesLINKS'>@OTT UPDTES</a>
+➲ <a href='t.me/+eVBVOyp9PRk3YmFl'>@MOVIE GROUP</a>
+➲ <a href='https://t.me/+uA5gEKm8WXk1ZTll'>@MAIN CHANNEL</a>
+╚═══ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═══╝
+</b>"""
