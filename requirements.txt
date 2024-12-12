@@ -11,4 +11,4 @@ git+https://github.com/Joelkb/cinemagoer
 datetime
 psutil
 python-dotenv
-pyrofork
+git+https://github.com/KurimuzonAkuma/pyrogram
