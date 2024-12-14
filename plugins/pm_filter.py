@@ -792,10 +792,7 @@ async def auto_filter(client, msg, spoll=False):
         offset = 0
     
     if offset == 0:
-        btn.append(
-            [InlineKeyboardButton(text="1/1", callback_data="pages")]
-        )
-    else:
+        
         key = f"{message.chat.id}-{message.id}"
         BUTTONS[key] = search
         req = message.from_user.id if message.from_user else 0
@@ -839,7 +836,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>Hey 👋🏻 {message.from_user.mention} 😍\n\n📫 Your Files are Ready Now</b>"
+        cap = f"<b>𝖧𝖾𝗒 : {msg.from_user.mention}\n\n📫 Your {search} Files are Ready Now</b>"         
     if imdb and imdb.get('poster'):
         try:
             mat = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
