@@ -189,7 +189,7 @@ Name - {}
 
 ╔═══ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═══╗ 
 ➲ <a href='t.me/MCUupdatesLINKS'>@OTT UPDTES</a>
-➲ <a href='t.me/+eVBVOyp9PRk3YmFl'>@MOVIE GROUP</a>
+➲ <a href='t.me/+AgeLXhJ_dMpmMmI1'>@PʀᴇDᴠD Lᴀᴛᴇꜱᴛ</a>
 ➲ <a href='https://t.me/+uA5gEKm8WXk1ZTll'>@MAIN CHANNEL</a>
 ╚═══ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═══╝
 </b>"""
