@@ -348,10 +348,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             try:
                 f_caption=CUSTOM_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='' if f_caption is None else f_caption, mention=query.from_user.mention)
             except Exception as e:
-            logger.exception(e)
+                logger.exception(e)
             f_caption = f_caption
-    if f_caption is None:
-        f_caption = f"{title}"
+        if f_caption is None:
+            f_caption = f"{title}"
         buttons = [[
             InlineKeyboardButton('⚙ Lᴀᴛᴇꜱᴛ Mᴏᴠɪᴇ Rᴇʟᴇᴀꜱᴇꜱ ⚙', url='https://t.me/MCUupdatesLINKS')
             ],[
