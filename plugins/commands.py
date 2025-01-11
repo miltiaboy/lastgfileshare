@@ -76,9 +76,9 @@ async def send_file(client, query, ident, file_id):
     if f_caption is None:
         f_cation = f"{title}"
     inline_keyboard = [[
-            InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/MCUupdatesLINKS')
+            InlineKeyboardButton('🖥 Oᴛᴛ Uᴩᴅᴀᴛᴇꜱ Cʜᴀɴɴᴇʟ 🖥', url=f'https://t.me/MCUupdatesLINKS')
             ],[     
-            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')
+            InlineKeyboardButton('⚙ Lᴀᴛᴇꜱᴛ Mᴏᴠɪᴇ Rᴇʟᴇᴀꜱᴇꜱ ⚙', url='https://t.me/+uA5gEKm8WXk1ZTll')
     ]]
     reply_markup = InlineKeyboardMarkup(inline_keyboard)
     ok = await client.send_cached_media(
