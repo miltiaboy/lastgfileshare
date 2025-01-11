@@ -92,8 +92,8 @@ async def send_file(client, query, ident, file_id):
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):   
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        buttons = [
-               InlineKeyboardButton('⚙ Bᴏᴛ Mᴏᴠɪᴇ Gʀᴏᴜᴩ ⚙', url=f'https://t.me/+eVBVOyp9PRk3YmFl')
+          buttons = [
+               InlineKeyboardButton('⚙ Lᴀᴛᴇꜱᴛ Mᴏᴠɪᴇ Rᴇʟᴇᴀꜱᴇꜱ ⚙', url=f'https://t.me/+uA5gEKm8WXk1ZTll')
                ],[
                 InlineKeyboardButton('⚓️ Oᴛᴛ Iɴsᴛᴀɢʀᴀᴍ Cʜᴀɴɴᴇʟ ⚓️', url=f'https://www.instagram.com/new_ott__updates?igsh=enI5ZzIzcXkzd3Bl')
               ],[
@@ -112,7 +112,7 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [
-               InlineKeyboardButton('⚙ Bᴏᴛ Mᴏᴠɪᴇ Gʀᴏᴜᴩ ⚙', url=f'https://t.me/+eVBVOyp9PRk3YmFl')
+               InlineKeyboardButton('⚙ Lᴀᴛᴇꜱᴛ Mᴏᴠɪᴇ Rᴇʟᴇᴀꜱᴇꜱ ⚙', url=f'https://t.me/+uA5gEKm8WXk1ZTll')
                ],[
                 InlineKeyboardButton('⚓️ Oᴛᴛ Iɴsᴛᴀɢʀᴀᴍ Cʜᴀɴɴᴇʟ ⚓️', url=f'https://www.instagram.com/new_ott__updates?igsh=enI5ZzIzcXkzd3Bl')
               ],[
@@ -182,7 +182,7 @@ async def start(client, message):
                 btn.append([InlineKeyboardButton("Try Again", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         sh = await client.send_message(
             chat_id=message.from_user.id,
-            text="**⚠️ ശ്രദ്ധിക്കുക ⚠️\n\nഫയൽ ലഭിക്കാൻ ഒരൊറ്റ ഒരു കാര്യം ചെയ്താൽ മതി താഴെ കാണുന്ന «➳ 𝐽𝑂𝐼𝑁 𝑈𝑃𝐷𝐴𝑇𝐸 𝐶𝐻𝑁𝑁𝑁𝐸𝐿 ✺» ബട്ടൻ ക്ലിക്ക് ചെയ്തിട്ട് «Request to join chnnnel» ക്ലിക്ക് ചെയ്താൽ അപ്പോൾ തന്നെ ഫയൽ ലഭിക്കും..!\n\n⚠️ 𝐵𝑒 𝐶𝑎𝑟𝑒𝑓𝑢𝑙 ⚠️\n\n𝑇𝑜 𝑔𝑒𝑡 𝑡ℎ𝑒 𝑓𝑖𝑙𝑒, 𝑦𝑜𝑢 𝑗𝑢𝑠𝑡 ℎ𝑎𝑣𝑒 𝑡𝑜 𝑑𝑜 𝑜𝑛𝑒 𝑡ℎ𝑖𝑛𝑔, 𝑐𝑙𝑖𝑐𝑘 𝑜𝑛 𝑡ℎ𝑒 𝑏𝑒𝑙𝑜𝑤 «➳ 𝐽𝑂𝐼𝑁 𝑈𝑃𝐷𝐴𝑇𝐸 𝐶𝐻𝑁𝑁𝑁𝐸𝐿 ✺» 𝑏𝑢𝑡𝑡𝑜𝑛 𝑎𝑛𝑑 𝑡ℎ𝑒𝑛 𝑐𝑙𝑖𝑐𝑘 𝑜𝑛 «𝑅𝑒𝑞𝑢𝑒𝑠𝑡 𝑡𝑜 𝑗𝑜𝑖𝑛 𝑐ℎ𝑎𝑛𝑛𝑒𝑙» 𝑎𝑛𝑑 𝑡ℎ𝑒𝑛 𝑦𝑜𝑢 𝑤𝑖𝑙𝑙 𝑔𝑒𝑡 𝑡ℎ𝑒 𝑓𝑖𝑙𝑒..!!**",
+            text="**⚠️ ശ്രദ്ധിക്കുക ⚠️\n\nഫയൽ ലഭിക്കാൻ ഒരൊറ്റ ഒരു കാര്യം ചെയ്താൽ മതി താഴെ കാണുന്ന «➳ 𝐽𝑂𝐼𝑁 𝑈𝑃𝐷𝐴𝑇𝐸 𝐶𝐻𝑁𝑁𝑁𝐸𝐿 ✺» ബട്ടൻ ക്ലിക്ക് ചെയ്തിട്ട് «Request to join chnnnel» ക്ലിക്ക് ചെയ്താൽ അപ്പോൾ തന്നെ ഫയൽ ലഭിക്കും..!\n\n⚠️ 𝐵𝑒 𝐶𝑎𝑟𝑒𝑓𝑢𝑙 ⚠️\n\n𝑇𝑜 𝑔𝑒𝑡 𝑡ℎ𝑒 𝑓𝑖𝑙𝑒, 𝑦𝑜𝑢 𝑗𝑢𝑠𝑡 ℎ𝑎𝑣𝑒 𝑡𝑜 𝑑𝑜 𝑜𝑛𝑒 𝑡ℎ𝑖𝑛𝑔, 𝑐𝑙𝑖𝑐𝑘 𝑜𝑛 𝑡ℎ𝑒 𝑏𝑒𝑙𝑜𝑤 «➳ 𝐽𝑂𝐼𝑁 𝑈𝑃𝐷𝐴𝑇𝐸 𝐶𝐻𝑁𝑁𝑁𝐸𝐿 ✺» 𝑏𝑢𝑡𝑡𝑜𝑛 𝑎𝑛ℎ𝑒𝑛 𝑐𝑙𝑖𝑐𝑘 𝑜𝑛 «𝑅𝑒𝑞𝑢𝑒𝑠𝑡 𝑡𝑜 𝑗𝑜𝑖𝑛 𝑐ℎ𝑎𝑛𝑛𝑒𝑙» 𝑎𝑛𝑑 𝑡ℎ𝑒𝑛 𝑦𝑜𝑢 𝑤𝑖𝑙𝑙 𝑔𝑒𝑡 𝑡ℎ𝑒 𝑓𝑖𝑙𝑒..!!**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
         )
@@ -202,7 +202,7 @@ async def start(client, message):
          
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [
-               InlineKeyboardButton('⚙ Bᴏᴛ Mᴏᴠɪᴇ Gʀᴏᴜᴩ ⚙', url=f'https://t.me/+eVBVOyp9PRk3YmFl')
+               InlineKeyboardButton('⚙ Lᴀᴛᴇꜱᴛ Mᴏᴠɪᴇ Rᴇʟᴇᴀꜱᴇꜱ ⚙', url=f'https://t.me/+uA5gEKm8WXk1ZTll')
                ],[
                 InlineKeyboardButton('⚓️ Oᴛᴛ Iɴsᴛᴀɢʀᴀᴍ Cʜᴀɴɴᴇʟ ⚓️', url=f'https://www.instagram.com/new_ott__updates?igsh=enI5ZzIzcXkzd3Bl')
               ],[
@@ -359,9 +359,9 @@ async def start(client, message):
         file_id=file_id,
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('പുതിയ സിനിമകൾ', url='https://t.me/MCUupdatesLINKS')
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Lᴀᴛᴇꜱᴛ Mᴏᴠɪᴇ Rᴇʟᴇᴀꜱᴇꜱ ⚙', url='https://t.me/MCUupdatesLINKS')
             ],[
-            InlineKeyboardButton('മൂവീസ് ഗ്രൂപ്പ് ', url='https://t.me/+eVBVOyp9PRk3YmFl')
+            InlineKeyboardButton('🖥 Oᴛᴛ Uᴩᴅᴀᴛᴇꜱ Cʜᴀɴɴᴇʟ 🖥', url='https://t.me/+uA5gEKm8WXk1ZTll')
             ]])
     )
     
