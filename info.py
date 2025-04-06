@@ -16,7 +16,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'autodelete')
 API_ID = int(environ.get("API_ID", "19071424"))
 API_HASH = environ.get("API_HASH", "c4b3e298cc50fd4cc563ae75ee882948")
-BOT_TOKEN = environ.get("BOT_TOKEN", "7854832338:AAHU0AwQcZZjV65akJP18Gf5oM7hO-TVBEs")
+BOT_TOKEN = environ.get("BOT_TOKEN", "7466979295:AAG6UlB81Q7COPbHprOSvGmJ4DxILjW-VW4")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
