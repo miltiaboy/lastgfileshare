@@ -38,8 +38,8 @@ REQ_CHANNEL2 = (int(REQ_CHANNEL2) if REQ_CHANNEL2 and id_pattern.search(REQ_CHAN
 
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://gimilat757:0wiQwyG8cIRJOmXs@cluster0.f2qk2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://sushankm16:4i1WAfPYKWyqPIDD@cluster0.sngp9pz.mongodb.net/?retryWrites=true&w=majority")
-DATABASE_URI3 = environ.get('DATABASE_URI3', "mongodb+srv://sushankm16:4i1WAfPYKWyqPIDD@cluster0.sngp9pz.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://gimilat757:0wiQwyG8cIRJOmXs@cluster0.f2qk2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI3 = environ.get('DATABASE_URI3', "mongodb+srv://gimilat757:0wiQwyG8cIRJOmXs@cluster0.f2qk2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DATABASE_NAME = environ.get('DATABASE_NAME', "MammoottyV1")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'mcu_files')
 
