@@ -131,7 +131,7 @@ async def start(client, message):
                 btn.append(
                       [
                     InlineKeyboardButton(
-                        "🚸 ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ II🚸, url=client.req_link2)
+                        "🚸 ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ II🚸", url=client.req_link2)
                       ]
                 )
                 should_run_check_loop_sub = True                      
