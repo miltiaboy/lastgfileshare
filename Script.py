@@ -39,6 +39,15 @@ Added By - {}
 ID - <code>{}</code>
 Name - {}
 """
+
+
+    NORSLTS = """𝗜𝗗 <b>: {}</b>
+𝗡𝗮𝗺𝗲 <b>: {}</b>
+
+
+𝗠𝗲𝘀𝘀𝗮𝗴𝗲 <code>{}</code>"""
+
+
     CUSTOM_FILE_CAPTION = """<b>𝐻𝑒𝑙𝑙𝑜 👋 {mention} 😍
     
 {file_caption}
