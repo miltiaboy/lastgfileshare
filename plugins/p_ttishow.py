@@ -8,7 +8,7 @@ from utils import get_size, temp, get_settings
 from Script import script
 from pyrogram.errors import ChatAdminRequired
 
-@Client.on_message(filters.command('stats') & filters.incoming)
+@Client.on_message(filters.command('check') & filters.incoming)
 async def get_ststs(bot, message):
     rju = await message.reply('Fetching stats..')
     tot = await Media.count_documents()
