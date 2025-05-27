@@ -113,8 +113,7 @@ async def start(client, message):
                 InlineKeyboardButton('⚙ ഉർവശി തീയറ്റേഴ്‌സ് ⚙', url=f'https://t.me/+RBNuafky0to1NDc1')
         ]               
         await message.reply_text(            
-            text=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),   
-            reply_markup = InlineKeyboardMarkup(buttons),
+            text=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),               
             parse_mode=enums.ParseMode.HTML
         )
         return
