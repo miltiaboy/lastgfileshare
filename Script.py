@@ -71,15 +71,6 @@ Name - {}
 
 
     CUSTOM_FILE_CAPTION = """
-<i><b><blockquote>📚 {file_name}
-
-⚙️ Fɪʟᴇ Sɪᴢᴇ :  {file_size}</blockquote></b></i><b>
-╔═══ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═══╗ 
-➲ <a href='https://t.me/+RBNuafky0to1NDc1'>Group</a>
-➲ <a href='https://t.me/UrvashiTheaters_Main'>CHANNEL</a>
-╚═══ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═══╝
-</b>
-
 <b><a href=https://t.me/+RBNuafky0to1NDc1>©𝐓𝐞𝐚𝐦 𝐔𝐫𝐯𝐚𝐬𝐡𝐢 𝐓𝐡𝐞𝐚𝐭𝐞𝐫𝐬™️</a></b>
 """
         
