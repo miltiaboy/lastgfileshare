@@ -239,15 +239,8 @@ async def start(client, message):
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
-                    protect_content=msg.get('protect', False),
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('🌀 ഉർവശി തീയറ്റേഴ്‌സ് 🌀', url='https://t.me/+RBNuafky0to1NDc1')            
-            ]])
-    )
-    k = await xd.reply(text=f"<blockquote><b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\n📘ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ɪɴ <b><u>10 mins</u> 🫥 <i></b>(ᴅᴜᴇ ᴛᴏ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs)</i>.\n\n<b><i>ᴘʟᴇᴀsᴇ ғᴏʀᴡᴀʀᴅ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴛᴏ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs ᴏʀ ᴀɴʏ ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ.\n\n📘ഈ ഫയൽ 10 മിനുട്ടിനുള്ളിൽ ഇവിടെ നിന്നും ഡിലീറ്റ് ആകുന്നതാണ്... ഫയൽ എവിടെങ്കിലും Forward ചെയ്ത് Download ചെയ്യുക 🤌</i></b></blockquote>")
-    await asyncio.sleep(3)
-    await xd.delete()
-    await k.delete()
-                   
+                    protect_content=msg.get('protect', True),
+                    )
             except FloodWait as e:
                 await asyncio.sleep(e.x)
                 logger.warning(f"Floodwait of {e.x} sec.")
@@ -255,15 +248,8 @@ async def start(client, message):
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
-                    protect_content=msg.get('protect', False),
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('🌀 ഉർവശി തീയറ്റേഴ്‌സ് 🌀', url='https://t.me/+RBNuafky0to1NDc1')            
-            ]])
-    )
-    k = await xd.reply(text=f"<blockquote><b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\n📘ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ɪɴ <b><u>10 mins</u> 🫥 <i></b>(ᴅᴜᴇ ᴛᴏ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs)</i>.\n\n<b><i>ᴘʟᴇᴀsᴇ ғᴏʀᴡᴀʀᴅ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴛᴏ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs ᴏʀ ᴀɴʏ ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ.\n\n📘ഈ ഫയൽ 10 മിനുട്ടിനുള്ളിൽ ഇവിടെ നിന്നും ഡിലീറ്റ് ആകുന്നതാണ്... ഫയൽ എവിടെങ്കിലും Forward ചെയ്ത് Download ചെയ്യുക 🤌</i></b></blockquote>")
-    await asyncio.sleep(3)
-    await xd.delete()
-    await k.delete()
-                    
+                    protect_content=msg.get('protect', True),
+                    )
             except Exception as e:
                 logger.warning(e, exc_info=True)
                 continue
