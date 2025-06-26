@@ -40,7 +40,7 @@ REQ_CHANNEL2 = (int(REQ_CHANNEL2) if REQ_CHANNEL2 and id_pattern.search(REQ_CHAN
 
 # MongoDB information
 USERS_DB = environ.get('USERS_DB', "")
-DATABASE_URI = environ.get('DATABASE_URI', USERS_DB)
+DATABASE_URI = environ.get('DATABASE_URI', "")
 DATABASE_URI2 = environ.get('DATABASE_URI2', USERS_DB)
 DATABASE_URI3 = environ.get('DATABASE_URI3', USERS_DB)
 DATABASE_NAME = environ.get('DATABASE_NAME', "pookie")
