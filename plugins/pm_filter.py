@@ -610,6 +610,27 @@ async def auto_filter(client, msg, spoll=False):
             return
         if 2 < len(message.text) < 100:
             search = message.text
+            search = search.lower()
+            find = search.split(" ")
+            search = ""
+            removes = ["in","upload", "series", "full", "horror", "thriller", "mystery", "print", "file"]
+            for x in find:
+                if x in removes:
+                    continue
+                else:
+                    search = search + x + " "
+            search = re.sub(r"\b(pl(i|e)*?(s|z+|ease|se|ese|(e+)s(e)?)|((send|snd|giv(e)?|gib)(\sme)?)|movie(s)?|new|latest|Veno|und|new movie|move|Hd|multi|dubb|dub|bro|bruh|broh|helo|that|find|dubbed|link|venum|iruka|pannunga|pannungga|anuppunga|anupunga|anuppungga|anupungga|film|subtile|undo|kitti|kitty|tharu|kittumo|kittum|movie|any(one)|with\ssubtitle(s)?)", "", search, flags=re.IGNORECASE)
+            search = re.sub(r"\s+", " ", search).strip()
+            search = search.replace("-", " ")
+            search = search.replace("_", " ")
+            search = search.replace(",", " ")
+            search = search.replace("#", " ")
+            search = search.replace("&", " ")
+            search = search.replace("?", " ")
+            search = search.replace(":", "")
+            search = search.replace(".", "")
+            search = search.replace("¡", "")
+            search = search.replace("/", "")
             files, offset, total_results = await get_search_results(search.lower(), offset=0, filter=True)
             if not files:
                 if settings["spell_check"]:
