@@ -249,11 +249,12 @@ async def start(client, message):
                 )
                 filesarr.append(msg)
                 k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie Files/Videos will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there</i></b>")
-                    await asyncio.sleep(60)
-                    await msg.delete()
-                    await k.delete()       
-                    
-                
+                await asyncio.sleep(60)
+                for x in filesarr:
+                    await x.delete()
+                await k.edit_text("<b>Your All Files/Videos is successfully deleted!!!</b>")
+                            
+                                    
             except FloodWait as e:
                 await asyncio.sleep(e.x)
                 logger.warning(f"Floodwait of {e.x} sec.")
@@ -265,8 +266,6 @@ async def start(client, message):
                 )
                 filesarr.append(msg)
                 
-
-
             except Exception as e:
                 logger.warning(e, exc_info=True)
                 continue
@@ -280,7 +279,7 @@ async def start(client, message):
         b_string = data.split("-", 1)[1]
         decoded = (base64.urlsafe_b64decode(b_string + "=" * (-len(b_string) % 4))).decode("ascii")
         try:
-            f_msg_id, l_msg_id, f_chat_id, protect = decoded.split("_", 3)
+            f_msg_id, l_msg_id, f_chat_id, protect = decoded.split("_",)
         except:
             f_msg_id, l_msg_id, f_chat_id = decoded.split("_", 2)
             protect = "/pbatch" if PROTECT_CONTENT else "batch"
