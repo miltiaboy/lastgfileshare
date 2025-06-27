@@ -248,7 +248,8 @@ async def start(client, message):
                     protect_content=msg.get('protect', False)                    
                 )
                 filesarr.append(msg)
-                
+                await asyncio.sleep(20)
+                await msg.delete()
                 
             except FloodWait as e:
                 await asyncio.sleep(e.x)
