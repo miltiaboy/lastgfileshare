@@ -241,13 +241,17 @@ async def start(client, message):
                     [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=f"https://t.me/+RBNuafky0to1NDc1")]
                 ]           
             try:                
-                await client.send_cached_media(
+                msg = await client.send_cached_media(
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
-                    protect_content=msg.get('protect', False)                
+                    protect_content=msg.get('protect', False)                    
                 )
                 filesarr.append(msg)
+                k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie Files/Videos will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there</i></b>")
+                await asyncio.sleep(20)
+                await msg.delete()
+                await k.delete()
                 
             except FloodWait as e:
                 await asyncio.sleep(e.x)
@@ -262,17 +266,21 @@ async def start(client, message):
                 k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie Files/Videos will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there</i></b>")
                 await asyncio.sleep(20)
                 await msg.delete()    
-                
+                await k.delete()
+
+
             except Exception as e:
                 logger.warning(e, exc_info=True)
                 continue
-            await asyncio.sleep(1) 
+            await asyncio.sleep(2) 
         await sts.delete()
         k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie Files/Videos will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there</i></b>")
         await asyncio.sleep(20)
         await k.delete()       
- 
+        await msg.delete()
+
         return
+
     elif data.split("-", 1)[0] == "DSTORE":
         sts = await message.reply("Please wait")
         b_string = data.split("-", 1)[1]
