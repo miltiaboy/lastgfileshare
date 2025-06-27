@@ -248,8 +248,11 @@ async def start(client, message):
                     protect_content=msg.get('protect', False)                    
                 )
                 filesarr.append(msg)
-                await asyncio.sleep(20)
-                await msg.delete()
+                k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie Files/Videos will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there</i></b>")
+                    await asyncio.sleep(60)
+                    await msg.delete()
+                    await k.delete()       
+                    
                 
             except FloodWait as e:
                 await asyncio.sleep(e.x)
@@ -261,10 +264,7 @@ async def start(client, message):
                     protect_content=msg.get('protect', False)                    
                 )
                 filesarr.append(msg)
-                k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie Files/Videos will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there</i></b>")
-                await asyncio.sleep(20)
-                await msg.delete()    
-                await k.delete()
+                
 
 
             except Exception as e:
@@ -272,11 +272,7 @@ async def start(client, message):
                 continue
             await asyncio.sleep(2) 
         await sts.delete()
-        k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie Files/Videos will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there</i></b>")
-        await asyncio.sleep(20)
-        await k.delete()       
-        await msg.delete()
-
+        
         return
 
     elif data.split("-", 1)[0] == "DSTORE":
