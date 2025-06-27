@@ -201,15 +201,14 @@ async def start(client, message):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-        return
-    data = message.command[1]
+        return 
     try:
         pre, file_id = data.split('_', 1)
     except:
         file_id = data
         pre = ""
     if data.split("-", 1)[0] == "BATCH":
-        sts = await message.reply("Please wait")
+        sts = await message.reply("<b>Please wait...</b>")
         file_id = data.split("-", 1)[1]
         msgs = BATCH_FILES.get(file_id)
         if not msgs:
@@ -222,6 +221,8 @@ async def start(client, message):
                 return await client.send_message(LOG_CHANNEL, "UNABLE TO OPEN FILE.")
             os.remove(file)
             BATCH_FILES[file_id] = msgs
+
+        filesarr = []
         for msg in msgs:
             title = msg.get("title")
             size=get_size(int(msg.get("size", 0)))
@@ -234,27 +235,48 @@ async def start(client, message):
                     f_caption=f_caption
             if f_caption is None:
                 f_caption = f"{title}"
-            try:
-                await client.send_cached_media(
+            else:
+                btn = [
+                    [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=f"https://t.me/+RBNuafky0to1NDc1")]
+                ]           
+            try:                
+          msg = await client.send_cached_media(
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
-                    )
+                    reply_markup=InlineKeyboardMarkup(button)
+                )
+                filesarr.append(msg)
+                
             except FloodWait as e:
                 await asyncio.sleep(e.x)
                 logger.warning(f"Floodwait of {e.x} sec.")
-                await client.send_cached_media(
+                msg = await client.send_cached_media(
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
-                    )
+                    reply_markup=InlineKeyboardMarkup(button)
+                )
+                filesarr.append(msg)
+                k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie Files/Videos will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there</i></b>")
+                await asyncio.sleep(10)
+                for x in filesarr:
+                    await x.delete()
+                await k.edit_text("<b>Your All Files/Videos is successfully deleted!!!</b>")
+            
             except Exception as e:
                 logger.warning(e, exc_info=True)
                 continue
             await asyncio.sleep(1) 
         await sts.delete()
+        k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie Files/Videos will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there</i></b>")
+        await asyncio.sleep(10)
+        for x in filesarr:
+            await x.delete()
+        await k.edit_text("<b>Your All Files/Videos is successfully deleted!!!</b>")       
+        
         return
     elif data.split("-", 1)[0] == "DSTORE":
         sts = await message.reply("Please wait")
