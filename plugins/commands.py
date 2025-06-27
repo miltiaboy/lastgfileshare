@@ -201,7 +201,8 @@ async def start(client, message):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-        return 
+        return
+    data = message.command[1]
     try:
         pre, file_id = data.split('_', 1)
     except:
