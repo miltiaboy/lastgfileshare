@@ -240,7 +240,7 @@ async def start(client, message):
                     [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=f"https://t.me/+RBNuafky0to1NDc1")]
                 ]           
             try:                
-          msg = await client.send_cached_media(
+                await client.send_cached_media(
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
