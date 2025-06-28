@@ -95,11 +95,11 @@ async def send_file(client, query, ident, file_id):
 async def start(client, message):   
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
-                InlineKeyboardButton('⚙ ഉർവശി തീയറ്റേഴ്‌സ് ⚙', url=f'https://t.me/+RBNuafky0to1NDc1')
+                InlineKeyboardButton('⛏️ ഉർവശി തീയറ്റേഴ്‌സ് ⛏️', url=f'https://t.me/+VqyHBSateMcwNjU9')
         ]       
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup)
-        await asyncio.sleep(2) # 😢 https://github.com/EvamariaTG/EvaMaria/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
+        await asyncio.sleep(1) # 😢 https://github.com/EvamariaTG/EvaMaria/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
         if not await db.get_chat(message.chat.id):
             total=await client.get_chat_members_count(message.chat.id)
             await client.send_message(LOG_CHANNEL, script.LOG_TEXT_G.format(message.chat.title, message.chat.id, total, "Unknown"))       
@@ -110,10 +110,12 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [
-                InlineKeyboardButton('⚙ ഉർവശി തീയറ്റേഴ്‌സ് ⚙', url=f'https://t.me/+RBNuafky0to1NDc1')
-        ]               
-        await message.reply_text(            
-            text=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),               
+                InlineKeyboardButton('⛏️ ഉർവശി തീയറ്റേഴ്‌സ് ⛏️', url=f'https://t.me/+VqyHBSateMcwNjU9')
+        ]            
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_video(   
+            video="https://envs.sh/2cQ.mp4",
+            caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),               
             parse_mode=enums.ParseMode.HTML
         )
         return
@@ -193,11 +195,12 @@ async def start(client, message):
          
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [
-               InlineKeyboardButton('⚙ ഉർവശി തീയറ്റേഴ്‌സ് ⚙', url=f'https://t.me/+RBNuafky0to1NDc1')
+                InlineKeyboardButton('⛏️ ഉർവശി തീയറ്റേഴ്‌സ് ⛏️', url=f'https://t.me/+VqyHBSateMcwNjU9')
         ]       
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_text(            
-            text=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+        await message.reply_video(     
+            video="https://envs.sh/2cQ.mp4",    
+            caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
@@ -233,11 +236,7 @@ async def start(client, message):
                     logger.exception(e)
                     f_caption=f_caption
             if f_caption is None:
-                f_cation = f"{title}"
-            inline_keyboard = [[
-                    InlineKeyboardButton('🌀 ഉർവശി തീയറ്റേഴ്‌സ് 🌀', url=f'https://t.me/+RBNuafky0to1NDc1')            
-            ]]
-            reply_markup = InlineKeyboardMarkup(inline_keyboard)
+                f_cation = f"{title}"            
             try:
                 ok = await client.send_cached_media(
                     chat_id=message.from_user.id,
@@ -245,8 +244,7 @@ async def start(client, message):
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
                     reply_markup=reply_markup
-                )  
-                k = await ok.reply(text=f"<blockquote><b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\n📘ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ɪɴ <b><u>10 mins</u> 🫥 <i></b>(ᴅᴜᴇ ᴛᴏ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs)</i>.\n\n<b><i>ᴘʟᴇᴀsᴇ ғᴏʀᴡᴀʀᴅ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴛᴏ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs ᴏʀ ᴀɴʏ ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ.\n\n📘ഈ ഫയൽ 10 മിനുട്ടിനുള്ളിൽ ഇവിടെ നിന്നും ഡിലീറ്റ് ആകുന്നതാണ്... ഫയൽ എവിടെങ്കിലും Forward ചെയ്ത് Download ചെയ്യുക 🤌</i></b></blockquote>")                                                          
+                )                  
             except FloodWait as e:
                 await asyncio.sleep(e.x)
                 logger.warning(f"Floodwait of {e.x} sec.")
@@ -256,8 +254,7 @@ async def start(client, message):
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
                     reply_markup=reply_markup
-                )  
-                k = await ok.reply(text=f"<blockquote><b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\n📘ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ɪɴ <b><u>10 mins</u> 🫥 <i></b>(ᴅᴜᴇ ᴛᴏ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs)</i>.\n\n<b><i>ᴘʟᴇᴀsᴇ ғᴏʀᴡᴀʀᴅ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴛᴏ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs ᴏʀ ᴀɴʏ ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ.\n\n📘ഈ ഫയൽ 10 മിനുട്ടിനുള്ളിൽ ഇവിടെ നിന്നും ഡിലീറ്റ് ആകുന്നതാണ്... ഫയൽ എവിടെങ്കിലും Forward ചെയ്ത് Download ചെയ്യുക 🤌</i></b></blockquote>")                                
+                )                    
             except Exception as e:
                 logger.warning(e, exc_info=True)
                 continue
